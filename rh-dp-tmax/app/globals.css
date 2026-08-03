@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   TOKENS DE DESIGN - Sistema RH/DP Tmax
+   Paleta inspirada em ai-zome (tingimento índigo) + selo vermelho de arquivo
+   oficial (referência às fichas de registro), sobre fundo "sumi" (tinta escura).
+   ========================================================================== */
+:root {
+  --bg: #14181c;
+  --bg-elevated: #1b2127;
+  --surface: #1f262d;
+  --surface-hover: #262e36;
+  --border: #2c3540;
+  --border-strong: #3a4552;
+
+  --text: #e9edf0;
+  --text-muted: #8b95a1;
+  --text-faint: #5c6672;
+
+  --indigo: #4a6fa5;
+  --indigo-strong: #6488c4;
+  --indigo-soft: #263548;
+
+  --selo: #b23a2e;
+  --selo-strong: #d14a3b;
+  --selo-soft: #3a2422;
+
+  --ouro: #c9a227;
+  --ouro-soft: #362f1c;
+
+  --verde: #4c9a6a;
+  --verde-soft: #1f3227;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-indigo: var(--indigo);
+  --color-indigo-strong: var(--indigo-strong);
+  --color-indigo-soft: var(--indigo-soft);
+  --color-selo: var(--selo);
+  --color-selo-strong: var(--selo-strong);
+  --color-selo-soft: var(--selo-soft);
+  --color-ouro: var(--ouro);
+  --color-ouro-soft: var(--ouro-soft);
+  --color-verde: var(--verde);
+  --color-verde-soft: var(--verde-soft);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo-strong);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.selo-restrito {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--selo-strong);
+  color: var(--selo-strong);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+}
